@@ -1,0 +1,3 @@
+com\ys\service\MenuService.class
+com\ys\service\impl\MenuServiceImpl.class
+com\ys\controller\MenuController.class

@@ -29,15 +29,15 @@ public class FeelServiceImpl implements FeelService {
 	
 	@Override
 	public Map<String, Object> upload(MultipartFile imgFile) throws IOException {
-		String filename = UUID.randomUUID()+imgFile.getOriginalFilename().substring(imgFile.getOriginalFilename().lastIndexOf("."));
-		boolean result = FtpUtil.uploadFile(host, port, username, password, basePath, filePath, filename, imgFile.getInputStream());
+		String fileName = UUID.randomUUID()+imgFile.getOriginalFilename().substring(imgFile.getOriginalFilename().lastIndexOf("."));
+		boolean result = FtpUtil.uploadFile(host, port, username, password, basePath, filePath, fileName, imgFile.getInputStream());
 		Map<String,Object> map = new HashMap<>();
 		if(result){
-			map.put("error", "0");
-			map.put("url", "http://192.168.72.131/"+filename);
+			map.put("error", 0);
+			map.put("url", "http://192.168.72.131/"+fileName);
 		}else{
-			map.put("error", "1");
-			map.put("message", "图片上传失败！！！");
+			map.put("error", 1);
+			map.put("message", "图片上传失败!!!");
 		}
 		return map;
 	

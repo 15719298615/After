@@ -38,7 +38,7 @@ KindEditor.ready(function(K) {
 </script>
 </head>
 <body>
-	<form action="" method="post">
+	<form action="insert" method="post">
 		标题:<input type="text" name="title"/><br/>
 		图片:<input type="button" id="J_selectImage" value="批量上传" />
 		<div id="J_imageView"></div>

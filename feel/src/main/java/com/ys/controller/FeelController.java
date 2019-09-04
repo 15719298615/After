@@ -15,19 +15,17 @@ import com.ys.service.FeelService;
 @Controller
 public class FeelController {
 	@Resource
-	private FeelService feelServiceImpl;
+	private FeelService feelService;
+	
 	@RequestMapping("upload")
 	@ResponseBody
 	public Map<String,Object> upload(MultipartFile imgFile){
-		
 		try {
-			return feelServiceImpl.upload(imgFile);
+			return feelService.upload(imgFile);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
 	}
-	
 	
 }

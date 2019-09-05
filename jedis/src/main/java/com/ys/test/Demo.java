@@ -25,7 +25,7 @@ public class Demo {
 	@Test
 	public void testInsert(){
 
-		Jedis jedis = new Jedis("192.168.72.132",6379);
+		Jedis jedis = new Jedis("ip地址",6379);
 /*		String result = jedis.set("address","咸阳");//新增
 		System.out.println(result);
 		*/
